@@ -1,0 +1,11 @@
+'use client';
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+
+const services=[
+  {title:'AI Product Systems',desc:'Intelligent platforms that turn complex workflows into clear, high-leverage experiences.',bg:'from-neutral-950 via-neutral-800 to-neutral-500'},
+  {title:'Digital Experiences',desc:'Cinematic interfaces, motion systems and immersive websites built for attention and recall.',bg:'from-stone-800 via-neutral-600 to-stone-300'},
+  {title:'Brand Intelligence',desc:'Positioning, identity and content systems sharpened with AI and human creative direction.',bg:'from-zinc-900 via-zinc-700 to-zinc-300'},
+  {title:'Growth Infrastructure',desc:'Conversion-focused digital ecosystems connecting acquisition, automation and sales.',bg:'from-neutral-900 via-stone-700 to-neutral-400'}
+];
+export default function Services(){const [active,setActive]=useState(0);return <section id="expertise" className="section-line px-5 md:px-8 py-24 md:py-36"><div className="grid md:grid-cols-12 gap-12"><div className="md:col-span-5"><p className="text-[10px] uppercase tracking-[.32em] text-muted mb-10">01 / OUR EXPERTISE</p><div>{services.map((s,i)=><button key={s.title} onMouseEnter={()=>setActive(i)} onFocus={()=>setActive(i)} className="w-full text-left border-t border-border py-6 md:py-8 group"><span className="flex items-start gap-4"><small className="pt-2 text-muted">0{i+1}</small><strong className={`text-3xl md:text-5xl tracking-[-.05em] transition-all duration-500 ${active===i?'opacity-100 translate-x-2':'opacity-45'}`}>{s.title}</strong></span></button>)}</div></div><div className="md:col-span-7"><div className="md:sticky md:top-28 h-[62vh] overflow-hidden bg-secondary"><AnimatePresence mode="wait"><motion.div key={active} initial={{opacity:0,scale:1.04}} animate={{opacity:1,scale:1}} exit={{opacity:0,scale:.98}} transition={{duration:.65,ease:[.22,1,.36,1]}} className={`absolute inset-0 bg-gradient-to-br ${services[active].bg}`}><div className="absolute inset-0 halftone opacity-20"/><div className="absolute inset-x-0 bottom-0 p-7 md:p-10 text-white"><p className="max-w-md text-sm md:text-base leading-relaxed text-white/75">{services[active].desc}</p></div></motion.div></AnimatePresence></div></div></div></section>}
