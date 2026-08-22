@@ -1,5 +1,3 @@
-'use client';
-import { Bot, BrainCircuit, Orbit, Sparkles, Waves, Workflow } from 'lucide-react';
-
-const brands=[['NOVA',Orbit],['SYNTH',BrainCircuit],['VECTOR',Workflow],['ARC',Waves],['LUMA',Sparkles],['KINETIC',Bot]] as const;
-export default function TrustedBrands(){const row=[...brands,...brands];return <section className="relative overflow-hidden py-7 section-line edge-fade"><div className="marquee-track gap-16 md:gap-24 px-8">{row.map(([name,Icon],i)=><div key={`${name}-${i}`} className="flex items-center gap-3 opacity-40 grayscale hover:opacity-100 transition duration-500"><Icon size={20}/><span className="text-xs md:text-sm font-semibold tracking-[.18em]">{name}</span></div>)}</div></section>}
+import {Aperture,Atom,Box,Cloud,Orbit,Sparkles} from 'lucide-react';
+const brands=[['NOVA',Aperture],['ARC',Orbit],['LUMEN',Sparkles],['QUANT',Atom],['FORM',Box],['NIMBUS',Cloud]] as const;
+export default function TrustedBrands(){return <section className="section-line relative overflow-hidden py-7 md:py-9"><div className="mb-5 px-5 md:px-8"><span className="label text-muted">TRUSTED BY TEAMS BUILDING WHAT'S NEXT</span></div><div className="edge-fade relative overflow-hidden"><div className="marquee-track gap-16 pr-16 md:gap-24 md:pr-24">{[...brands,...brands].map(([name,Icon],i)=><div key={`${name}-${i}`} className="group flex shrink-0 items-center gap-3 opacity-35 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0"><Icon size={20} strokeWidth={1.4}/><span className="text-xl font-medium tracking-[-.03em] md:text-2xl">{name}</span></div>)}</div></div></section>
