@@ -1,0 +1,7 @@
+'use client';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import SplitType from 'split-type';
+
+export default function About(){const ref=useRef<HTMLHeadingElement>(null);useEffect(()=>{gsap.registerPlugin(ScrollTrigger);if(!ref.current)return;const split=new SplitType(ref.current,{types:'words'});gsap.fromTo(split.words,{opacity:.15},{opacity:1,stagger:.08,scrollTrigger:{trigger:ref.current,start:'top 80%',end:'bottom 35%',scrub:1}});return()=>{split.revert();ScrollTrigger.getAll().forEach(t=>t.kill())}},[]);return <section id="about" className="section-line py-24 md:py-36 overflow-hidden"><div className="px-5 md:px-8"><p className="text-[10px] uppercase tracking-[.32em] text-muted">03 / OUR VISION</p><h2 ref={ref} className="mt-12 max-w-[1500px] text-[10vw] md:text-[6.3vw] leading-[.92] tracking-[-.065em]">We believe the future belongs to brands that move with intelligence, communicate with clarity and create experiences people can feel.</h2></div><div className="mt-24 border-y border-border py-5"><div className="marquee-track text-4xl md:text-7xl font-medium tracking-[-.04em] whitespace-nowrap"><span>ARTIFICIAL INTELLIGENCE — BRAND STRATEGY — DIGITAL PRODUCTS — MOTION SYSTEMS — FUTURE EXPERIENCES —&nbsp;</span><span>ARTIFICIAL INTELLIGENCE — BRAND STRATEGY — DIGITAL PRODUCTS — MOTION SYSTEMS — FUTURE EXPERIENCES —&nbsp;</span></div></div></section>}
