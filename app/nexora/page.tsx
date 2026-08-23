@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import NexoraV9 from '@/components/nexora/NexoraV9';
+import NexoraV9Safe from '@/components/nexora/NexoraV9Safe';
 
 export const metadata: Metadata = {
   title: 'NEXORA V9 — AI Autonomy OS',
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function NexoraPage() {
-  return <NexoraV9 />;
+  return <NexoraV9Safe />;
 }
