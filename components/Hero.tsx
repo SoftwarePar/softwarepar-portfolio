@@ -10,12 +10,20 @@ export default function Hero(){
   const current=useMemo(()=>phrases[phrase],[phrase]);
   useEffect(()=>{let i=0;setTyped('');const timer=window.setInterval(()=>{i+=1;setTyped(current.slice(0,i));if(i>=current.length){window.clearInterval(timer);window.setTimeout(()=>setPhrase(v=>(v+1)%phrases.length),1250)}},62);return()=>window.clearInterval(timer)},[current]);
   useEffect(()=>{if(!root.current)return;const ctx=gsap.context(()=>{gsap.from('[data-hero]',{y:60,opacity:0,duration:1.25,stagger:.08,ease:'power4.out'})},root);return()=>ctx.revert()},[]);
-  return <section ref={root} id="home" className="relative min-h-screen overflow-hidden border-t border-border">
-    <video className="absolute inset-0 h-full w-full object-cover opacity-[.85] mix-blend-luminosity" autoPlay muted loop playsInline aria-hidden="true">
-      <source src="/softwarepar-portfolio/hero_bg_animation_hand.mp4" type="video/mp4"/>
+  return <section ref={root} id="home" className="relative min-h-screen overflow-hidden border-t border-border bg-[#F5F3EF]">
+    <video
+      className="absolute inset-0 h-full w-full object-cover object-center opacity-[.96] mix-blend-luminosity"
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="auto"
+      aria-hidden="true"
+    >
+      <source src="./hero_bg_animation_hand.mp4" type="video/mp4"/>
     </video>
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(245,243,239,.12)_45%,rgba(245,243,239,.82)_100%)]"/>
-    <div className="absolute inset-0 halftone opacity-55"/>
+    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,243,239,0)_0%,rgba(245,243,239,.04)_58%,rgba(245,243,239,.38)_100%)]"/>
+    <div className="pointer-events-none absolute inset-0 halftone opacity-30"/>
     <div className="relative z-10 mx-auto flex min-h-screen max-w-[1680px] flex-col items-center justify-center px-5 pt-24 text-center md:px-8">
       <p data-hero className="label mb-6 text-muted">PIXZEN / INDEPENDENT AI CREATIVE STUDIO</p>
       <h1 data-hero className="max-w-[1600px] whitespace-nowrap text-[17vw] font-medium leading-[.82] tracking-[-.075em] md:text-[9.5vw]">PIXZEN</h1>
