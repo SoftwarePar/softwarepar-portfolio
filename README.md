@@ -2,6 +2,14 @@
 
 Public showcase for SoftwarePar digital experiences, interactive landing pages and product demonstrations.
 
+## Master production protocol
+
+The complete operating playbook for future premium landing pages, websites, portfolio experiences and SaaS frontends is documented here:
+
+**[`docs/LANDING_PRODUCTION_PROTOCOL.md`](docs/LANDING_PRODUCTION_PROTOCOL.md)**
+
+This protocol must be used as the default execution checklist before coding, during asset production, responsive QA, debugging and deployment.
+
 ## PIXZEN — deployment and asset protocol
 
 This repository is deployed to GitHub Pages through GitHub Actions and Next.js static export.
