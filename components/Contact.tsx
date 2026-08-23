@@ -1,9 +1,11 @@
 'use client';
-import {MoveUpRight} from 'lucide-react';
+import {Mail,MoveUpRight} from 'lucide-react';
 import {MouseEvent,useRef} from 'react';
 import gsap from 'gsap';
 
 const contactUrl='https://wa.me/5491161396633?text=Hola%20Pablo%2C%20vi%20tu%20portfolio%20PIXZEN%20y%20quiero%20consultarte%20por%20un%20proyecto.';
+const emailUrl='mailto:softwarepardeve@gmail.com?subject=Consulta%20desde%20PIXZEN';
+const linkedinUrl='https://www.linkedin.com/in/pablo-solla-sdr';
 
 export default function Contact(){
  const button=useRef<HTMLAnchorElement>(null);
@@ -24,6 +26,10 @@ export default function Contact(){
      <span ref={label} className="relative z-10 whitespace-nowrap text-[10px] font-semibold tracking-[.18em] sm:text-[11px] sm:tracking-[.2em]">START A PROJECT</span>
      <span ref={icon} className="relative z-10 ml-4 grid h-9 w-9 shrink-0 place-items-center rounded-full border border-black/15 bg-black text-white transition-all duration-500 group-hover:rotate-45 group-hover:border-white/20 group-hover:bg-white group-hover:text-black sm:ml-6"><MoveUpRight size={15}/></span>
     </a>
+   </div>
+   <div className="mt-2 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[10px] font-medium tracking-[.16em] text-white/50 sm:text-[11px]">
+    <a href={emailUrl} className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-white"><Mail size={13}/> SOFTWAREPARDEVE@GMAIL.COM</a>
+    <a href={linkedinUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-white">LINKEDIN <MoveUpRight size={13}/></a>
    </div>
   </div>
  </section>
