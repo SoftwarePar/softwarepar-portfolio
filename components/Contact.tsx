@@ -3,52 +3,13 @@ import {MoveUpRight} from 'lucide-react';
 import {MouseEvent,useRef} from 'react';
 import gsap from 'gsap';
 
+const contactUrl='https://wa.me/5491161396633';
+
 export default function Contact(){
  const button=useRef<HTMLAnchorElement>(null);
  const label=useRef<HTMLSpanElement>(null);
  const icon=useRef<HTMLSpanElement>(null);
-
- const move=(e:MouseEvent<HTMLDivElement>)=>{
-  if(!button.current)return;
-  const rect=button.current.getBoundingClientRect();
-  const x=e.clientX-(rect.left+rect.width/2);
-  const y=e.clientY-(rect.top+rect.height/2);
-  const distance=Math.hypot(x,y);
-  if(distance<220){
-   gsap.to(button.current,{x:x*.16,y:y*.16,duration:.42,ease:'power4.out'});
-   if(label.current)gsap.to(label.current,{x:x*.035,y:y*.035,duration:.42,ease:'power4.out'});
-   if(icon.current)gsap.to(icon.current,{x:x*.055,y:y*.055,duration:.42,ease:'power4.out'});
-  }
- };
-
- const reset=()=>{
-  if(button.current)gsap.to(button.current,{x:0,y:0,duration:1.05,ease:'elastic.out(1,.35)'});
-  if(label.current)gsap.to(label.current,{x:0,y:0,duration:.8,ease:'power4.out'});
-  if(icon.current)gsap.to(icon.current,{x:0,y:0,duration:.8,ease:'power4.out'});
- };
-
- return <section id="contact" onMouseMove={move} onMouseLeave={reset} className="section-line relative min-h-screen overflow-hidden bg-black px-5 py-28 text-white md:px-8">
-  <div className="absolute left-[10%] top-[20%] h-[35vw] w-[35vw] rounded-full bg-white/15 blur-3xl animate-pulse"/>
-  <div className="absolute bottom-[5%] right-[8%] h-[32vw] w-[32vw] rounded-full bg-[#7d7d7d]/35 blur-3xl animate-pulse [animation-delay:1s]"/>
-  <div className="relative z-10 mx-auto flex min-h-[78vh] max-w-[1600px] flex-col items-center justify-center text-center">
-   <p className="label mb-7 text-white/45">LET&apos;S MAKE SOMETHING IMPOSSIBLE TO IGNORE</p>
-   <h2 className="max-w-[1500px] text-[16vw] font-medium leading-[.78] tracking-[-.075em] mix-blend-difference md:text-[10vw]">Let&apos;s Build<br/>The Future.</h2>
-   <p className="mt-9 max-w-xl text-base leading-7 text-white/55">Strategy, artificial intelligence, digital product and motion brought together as one coherent experience.</p>
-
-   <div className="mt-12 flex min-h-[120px] min-w-[320px] items-center justify-center">
-    <a
-     ref={button}
-     href="mailto:hello@pixzen.ai?subject=Start%20a%20Project%20with%20PIXZEN"
-     aria-label="Start a project with PIXZEN"
-     className="group relative inline-flex min-w-[270px] items-center justify-between overflow-hidden rounded-full border border-white/45 bg-white px-6 py-4 text-black shadow-[0_15px_70px_rgba(255,255,255,.12)] transition-[background-color,color,border-color] duration-500 hover:border-white hover:bg-black hover:text-white"
-    >
-     <span className="absolute inset-0 origin-left scale-x-0 bg-black transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-x-100"/>
-     <span ref={label} className="relative z-10 whitespace-nowrap text-[11px] font-semibold tracking-[.2em]">START A PROJECT</span>
-     <span ref={icon} className="relative z-10 ml-6 grid h-9 w-9 place-items-center rounded-full border border-black/15 bg-black text-white transition-all duration-500 group-hover:rotate-45 group-hover:border-white/20 group-hover:bg-white group-hover:text-black">
-      <MoveUpRight size={15}/>
-     </span>
-    </a>
-   </div>
-  </div>
- </section>
+ const move=(e:MouseEvent<HTMLDivElement>)=>{if(!button.current)return;const rect=button.current.getBoundingClientRect();const x=e.clientX-(rect.left+rect.width/2);const y=e.clientY-(rect.top+rect.height/2);const distance=Math.hypot(x,y);if(distance<220){gsap.to(button.current,{x:x*.16,y:y*.16,duration:.42,ease:'power4.out'});if(label.current)gsap.to(label.current,{x:x*.035,y:y*.035,duration:.42,ease:'power4.out'});if(icon.current)gsap.to(icon.current,{x:x*.055,y:y*.055,duration:.42,ease:'power4.out'})}};
+ const reset=()=>{if(button.current)gsap.to(button.current,{x:0,y:0,duration:1.05,ease:'elastic.out(1,.35)'});if(label.current)gsap.to(label.current,{x:0,y:0,duration:.8,ease:'power4.out'});if(icon.current)gsap.to(icon.current,{x:0,y:0,duration:.8,ease:'power4.out'})};
+ return <section id="contact" onMouseMove={move} onMouseLeave={reset} className="section-line relative min-h-screen overflow-hidden bg-black px-5 py-28 text-white md:px-8"><div className="absolute left-[10%] top-[20%] h-[35vw] w-[35vw] rounded-full bg-white/15 blur-3xl animate-pulse"/><div className="absolute bottom-[5%] right-[8%] h-[32vw] w-[32vw] rounded-full bg-[#7d7d7d]/35 blur-3xl animate-pulse [animation-delay:1s]"/><div className="relative z-10 mx-auto flex min-h-[78vh] max-w-[1600px] flex-col items-center justify-center text-center"><p className="label mb-7 text-white/45">LET&apos;S MAKE SOMETHING IMPOSSIBLE TO IGNORE</p><h2 className="max-w-[1500px] text-[16vw] font-medium leading-[.78] tracking-[-.075em] mix-blend-difference md:text-[10vw]">Let&apos;s Build<br/>The Future.</h2><p className="mt-9 max-w-xl text-base leading-7 text-white/55">Strategy, artificial intelligence, digital product and motion brought together as one coherent experience.</p><div className="mt-12 flex min-h-[120px] min-w-[320px] items-center justify-center"><a ref={button} href={contactUrl} target="_blank" rel="noreferrer" aria-label="Contact on WhatsApp" className="group relative inline-flex min-w-[270px] items-center justify-between overflow-hidden rounded-full border border-white/45 bg-white px-6 py-4 text-black shadow-[0_15px_70px_rgba(255,255,255,.12)] transition-[background-color,color,border-color] duration-500 hover:border-white hover:bg-black hover:text-white"><span className="absolute inset-0 origin-left scale-x-0 bg-black transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-x-100"/><span ref={label} className="relative z-10 whitespace-nowrap text-[11px] font-semibold tracking-[.2em]">START A PROJECT</span><span ref={icon} className="relative z-10 ml-6 grid h-9 w-9 place-items-center rounded-full border border-black/15 bg-black text-white transition-all duration-500 group-hover:rotate-45 group-hover:border-white/20 group-hover:bg-white group-hover:text-black"><MoveUpRight size={15}/></span></a></div></div></section>
 }
