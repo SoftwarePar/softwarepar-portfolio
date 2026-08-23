@@ -1,12 +1,11 @@
 import type { Metadata } from 'next';
-import NexoraPremiumOS from '@/components/nexora/NexoraPremiumOS';
+import NexoraV12 from '@/components/nexora/NexoraV12';
 
 export const metadata: Metadata = {
-  title: 'NEXORA — Enterprise Autonomy OS',
-  description:
-    'Premium interactive enterprise AI operations demo by SoftwarePar with workflow orchestration, autonomous agents, human approvals, runtime telemetry, economics and governance.',
+  title: 'NEXORA V12 — Enterprise AI Command Center',
+  description: 'High-fidelity enterprise AI autonomy command center by SoftwarePar.',
 };
 
 export default function NexoraPage() {
-  return <NexoraPremiumOS />;
+  return <NexoraV12 />;
 }
