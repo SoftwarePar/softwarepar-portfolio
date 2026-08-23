@@ -4,7 +4,7 @@ import {ChevronDown} from 'lucide-react';
 import gsap from 'gsap';
 
 const phrases=['Building Tomorrow','Shaping Futures','Driving Growth'];
-const videoSrc='/softwarepar-portfolio/hero_bg_animation_hand.mp4';
+const videoSrc='https://raw.githubusercontent.com/SoftwarePar/softwarepar-portfolio/main/public/hero_bg_animation_hand.mp4';
 
 export default function Hero(){
   const root=useRef<HTMLElement>(null);
@@ -49,6 +49,7 @@ export default function Hero(){
     <div className="absolute inset-0 z-0 overflow-hidden bg-[#F5F3EF]">
       <video
         ref={videoRef}
+        src={videoSrc}
         className="absolute left-1/2 top-1/2 h-full w-full min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 object-cover object-center opacity-100 grayscale contrast-[1.05] brightness-[1.03]"
         autoPlay
         muted
@@ -56,9 +57,7 @@ export default function Hero(){
         playsInline
         preload="auto"
         aria-hidden="true"
-      >
-        <source src={videoSrc} type="video/mp4"/>
-      </video>
+      />
     </div>
 
     <div className="pointer-events-none absolute inset-0 z-[1] bg-[radial-gradient(circle_at_center,rgba(245,243,239,0)_0%,rgba(245,243,239,.02)_62%,rgba(245,243,239,.20)_100%)]"/>
