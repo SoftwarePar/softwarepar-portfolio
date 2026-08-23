@@ -4,7 +4,7 @@ import {ChevronDown} from 'lucide-react';
 import gsap from 'gsap';
 
 const phrases=['Building Tomorrow','Shaping Futures','Driving Growth'];
-const videoSrc='https://raw.githubusercontent.com/SoftwarePar/softwarepar-portfolio/main/public/hero_bg_animation_hand.mp4';
+const videoSrc='/softwarepar-portfolio/hero_bg_animation_hand.mp4.mp4';
 
 export default function Hero(){
   const root=useRef<HTMLElement>(null);
@@ -50,7 +50,7 @@ export default function Hero(){
       <video
         ref={videoRef}
         src={videoSrc}
-        className="absolute left-1/2 top-1/2 h-full w-full min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 object-cover object-center opacity-100 grayscale contrast-[1.05] brightness-[1.03]"
+        className="absolute left-1/2 top-1/2 h-full w-full min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 object-cover object-center opacity-[.88] mix-blend-luminosity grayscale contrast-[1.03] brightness-[1.08]"
         autoPlay
         muted
         loop
@@ -60,8 +60,8 @@ export default function Hero(){
       />
     </div>
 
-    <div className="pointer-events-none absolute inset-0 z-[1] bg-[radial-gradient(circle_at_center,rgba(245,243,239,0)_0%,rgba(245,243,239,.02)_62%,rgba(245,243,239,.20)_100%)]"/>
-    <div className="pointer-events-none absolute inset-0 z-[2] halftone opacity-20"/>
+    <div className="pointer-events-none absolute inset-0 z-[1] bg-[radial-gradient(circle_at_center,rgba(245,243,239,0)_0%,rgba(245,243,239,.03)_62%,rgba(245,243,239,.22)_100%)]"/>
+    <div className="pointer-events-none absolute inset-0 z-[2] halftone opacity-25"/>
 
     <div className="relative z-10 mx-auto flex min-h-screen max-w-[1680px] flex-col items-center justify-center px-5 pt-24 text-center md:px-8">
       <p data-hero className="label mb-6 text-muted">PIXZEN / INDEPENDENT AI CREATIVE STUDIO</p>
