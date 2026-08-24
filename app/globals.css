@@ -6,7 +6,83 @@
 .grain{position:fixed;inset:0;pointer-events:none;z-index:200;opacity:.03;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}.section-line{border-top:1px solid var(--border)}.label{font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase}.halftone{background-image:radial-gradient(circle at center,rgba(10,10,10,.2) 1px,transparent 1.2px);background-size:7px 7px;mix-blend-mode:multiply}.edge-fade:before,.edge-fade:after{content:"";position:absolute;top:0;bottom:0;width:12vw;z-index:2;pointer-events:none}.edge-fade:before{left:0;background:linear-gradient(90deg,var(--background),transparent)}.edge-fade:after{right:0;background:linear-gradient(270deg,var(--background),transparent)}
 /* NEXORA: preserve wheel/touch scrolling but never render native scrollbars in the left rail */
 aside,aside *{scrollbar-width:none!important;-ms-overflow-style:none!important}aside::-webkit-scrollbar,aside *::-webkit-scrollbar{display:none!important;width:0!important;height:0!important;background:transparent!important}
+
+/* NEXORA premium console refinement — scoped to the autonomy OS only */
+main[class*="bg-[#020711]"]{
+  --nx-line:#17263c;--nx-line-hi:#253a58;--nx-panel:#071321;--nx-panel-2:#040d18;--nx-text:#eaf2ff;--nx-muted:#74839a;--nx-violet:#a66cff;--nx-cyan:#38d8ff;
+  background:
+    radial-gradient(circle at 74% -8%,rgba(117,62,255,.10),transparent 27%),
+    radial-gradient(circle at 22% 8%,rgba(23,132,255,.055),transparent 24%),
+    linear-gradient(180deg,#020711 0%,#020812 55%,#02060d 100%);
+}
+main[class*="bg-[#020711]"] aside{
+  background:linear-gradient(180deg,rgba(3,9,20,.995),rgba(2,7,16,.995));
+  border-right-color:#16233a!important;
+  box-shadow:18px 0 55px rgba(0,0,0,.18),inset -1px 0 rgba(255,255,255,.012);
+}
+main[class*="bg-[#020711]"] aside>div:first-child{padding:2px 1px 8px}
+main[class*="bg-[#020711]"] aside button{
+  position:relative;isolation:isolate;min-height:34px;border-radius:9px!important;
+  transition:background .22s ease,border-color .22s ease,color .22s ease,transform .18s ease,box-shadow .22s ease!important;
+}
+main[class*="bg-[#020711]"] aside button:hover{transform:translateX(2px);border-color:rgba(151,91,255,.18)!important;background:linear-gradient(90deg,rgba(125,69,255,.085),rgba(255,255,255,.012))!important;box-shadow:inset 0 1px rgba(255,255,255,.018)}
+main[class*="bg-[#020711]"] aside button:active{transform:translateX(2px) scale(.985)}
+main[class*="bg-[#020711]"] aside button[class*="border-violet"]:before{content:"";position:absolute;left:-1px;top:7px;bottom:7px;width:2px;border-radius:2px;background:linear-gradient(#48d9ff,#9a63ff,#e748ff);box-shadow:0 0 12px rgba(139,92,246,.7)}
+main[class*="bg-[#020711]"] aside p[class*="tracking"]{letter-spacing:.145em!important;color:#46556c!important}
+main[class*="bg-[#020711]"] aside>div:last-child{position:relative;overflow:hidden;border-color:#1b2c45!important;background:linear-gradient(135deg,rgba(10,23,42,.96),rgba(4,12,24,.96))!important;box-shadow:inset 0 1px rgba(255,255,255,.018),0 -10px 28px rgba(0,0,0,.18)}
+main[class*="bg-[#020711]"] aside>div:last-child:after{content:"";position:absolute;right:-18px;top:-28px;width:62px;height:62px;border-radius:999px;background:radial-gradient(circle,rgba(140,82,255,.15),transparent 68%);pointer-events:none}
+
+main[class*="bg-[#020711]"] header{border-bottom-color:#17243a!important;background:linear-gradient(180deg,rgba(2,7,17,.965),rgba(2,7,17,.91))!important;box-shadow:0 12px 35px rgba(0,0,0,.15);backdrop-filter:blur(18px) saturate(125%)}
+main[class*="bg-[#020711]"] header button{transition:transform .18s ease,border-color .2s ease,background .2s ease,box-shadow .2s ease,color .2s ease}
+main[class*="bg-[#020711]"] header button:hover{transform:translateY(-1px);border-color:rgba(150,92,255,.34)!important;box-shadow:0 8px 22px rgba(0,0,0,.20),0 0 20px rgba(124,58,237,.055)}
+main[class*="bg-[#020711]"] header button:active{transform:translateY(0) scale(.97)}
+main[class*="bg-[#020711]"] header button[class*="max-w-[310px]"]{background:linear-gradient(90deg,rgba(124,58,237,.075),rgba(14,38,70,.08))!important;box-shadow:inset 0 1px rgba(255,255,255,.02),0 0 26px rgba(124,58,237,.035)}
+
+main[class*="bg-[#020711]"] div[class*="border-[#16253b]"]{
+  position:relative;
+  border-color:#182b45!important;
+  background:linear-gradient(180deg,rgba(6,16,31,.985),rgba(3,10,21,.995))!important;
+  box-shadow:0 18px 48px rgba(0,0,0,.25),inset 0 1px rgba(255,255,255,.018),inset 0 -1px rgba(0,0,0,.25)!important;
+}
+main[class*="bg-[#020711]"] div[class*="border-[#16253b]"]:hover{border-color:#203957!important;box-shadow:0 22px 58px rgba(0,0,0,.30),0 0 30px rgba(85,94,255,.025),inset 0 1px rgba(255,255,255,.025)!important}
+main[class*="bg-[#020711]"] div[class*="border-[#16253b]"]>div:first-child{position:relative;z-index:1}
+
+main[class*="bg-[#020711]"] button:not(:disabled){user-select:none;overflow:hidden}
+main[class*="bg-[#020711]"] button[class*="rounded-[8px]"],
+main[class*="bg-[#020711]"] button[class*="rounded-[9px]"]{
+  letter-spacing:.01em;box-shadow:inset 0 1px rgba(255,255,255,.018);
+}
+main[class*="bg-[#020711]"] button[class*="bg-violet"]{background:linear-gradient(135deg,rgba(121,62,255,.17),rgba(84,39,171,.09))!important;border-color:rgba(166,108,255,.25)!important}
+main[class*="bg-[#020711]"] button[class*="bg-violet"]:hover{border-color:rgba(172,119,255,.48)!important;background:linear-gradient(135deg,rgba(137,73,255,.23),rgba(75,47,178,.13))!important;box-shadow:0 0 26px rgba(124,58,237,.10),inset 0 1px rgba(255,255,255,.03)}
+main[class*="bg-[#020711]"] button[class*="bg-emerald"]:hover{box-shadow:0 0 26px rgba(52,211,153,.09),inset 0 1px rgba(255,255,255,.025)}
+main[class*="bg-[#020711]"] button[class*="bg-amber"]:hover{box-shadow:0 0 24px rgba(245,158,11,.10),inset 0 1px rgba(255,255,255,.025)}
+
+main[class*="bg-[#020711]"] input{border:0;color:#dce9fa;caret-color:#a66cff}
+main[class*="bg-[#020711]"] input::placeholder{color:#53627a}
+main[class*="bg-[#020711]"] input:focus{filter:brightness(1.08)}
+
+main[class*="bg-[#020711]"] svg path{transition:stroke-opacity .2s ease,opacity .2s ease}
+main[class*="bg-[#020711]"] [class*="font-mono"]{font-variant-numeric:tabular-nums}
+main[class*="bg-[#020711]"] [class*="text-[7px]"]{line-height:1.35}
+main[class*="bg-[#020711]"] [class*="text-[8px]"]{line-height:1.35}
+main[class*="bg-[#020711]"] [class*="rounded-full"][class*="bg-emerald"]{box-shadow:0 0 10px rgba(52,211,153,.20)}
+
+main[class*="bg-[#020711]"] section>div[class*="max-w-[1530px]"]{animation:nxEnter .38s cubic-bezier(.2,.75,.25,1) both}
+@keyframes nxEnter{from{opacity:.72;transform:translateY(3px)}to{opacity:1;transform:none}}
+@keyframes nxPulseSoft{0%,100%{box-shadow:0 0 0 rgba(166,108,255,0)}50%{box-shadow:0 0 28px rgba(166,108,255,.08)}}
+main[class*="bg-[#020711]"] [class*="ring-lime"]{animation:nxPulseSoft 2.8s ease-in-out infinite}
+
+/* tactile interaction system applied to every NEXORA button */
+.nx-ripple{position:absolute;z-index:30;width:10px;height:10px;border-radius:999px;pointer-events:none;background:radial-gradient(circle,rgba(255,255,255,.34),rgba(151,91,255,.20) 38%,transparent 72%);transform:translate(-50%,-50%) scale(0);animation:nxRipple .62s cubic-bezier(.18,.72,.24,1) forwards}
+@keyframes nxRipple{0%{opacity:.72;transform:translate(-50%,-50%) scale(0)}100%{opacity:0;transform:translate(-50%,-50%) scale(18)}}
+.nx-pointer-aura{position:fixed;z-index:55;left:var(--nx-pointer-x,-100px);top:var(--nx-pointer-y,-100px);width:220px;height:220px;border-radius:999px;pointer-events:none;opacity:0;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(126,88,255,.055),rgba(42,190,255,.022) 34%,transparent 68%);filter:blur(2px);transition:opacity .22s ease;mix-blend-mode:screen}
+.nx-pointer-aura.is-active{opacity:1}
+html[data-nx-keyboard="true"] main[class*="bg-[#020711]"] button:focus-visible{outline:1px solid rgba(167,108,255,.85)!important;outline-offset:2px!important;box-shadow:0 0 0 3px rgba(124,58,237,.12),0 0 22px rgba(124,58,237,.10)!important}
+
+@media(min-width:1280px){main[class*="bg-[#020711]"] section>div[class*="max-w-[1530px]"]{padding-top:14px!important}main[class*="bg-[#020711]"] aside{width:184px!important}}
+@media(max-width:1023px){main[class*="bg-[#020711]"] header{background:rgba(2,7,17,.97)!important}.nx-pointer-aura{display:none}}
+
 @keyframes marquee{to{transform:translateX(-50%)}}@keyframes cursorBlink{50%{opacity:0}}@keyframes bounceSoft{50%{transform:translateY(8px)}}.marquee-track{display:flex;width:max-content;animation:marquee 28s linear infinite;will-change:transform}.marquee-track:hover{animation-play-state:paused}.cursor-blink{animation:cursorBlink .8s steps(1) infinite}.bounce-soft{animation:bounceSoft 1.8s ease-in-out infinite}
 @media(max-width:767px){html{scroll-padding-top:72px}.label{font-size:9px;letter-spacing:.18em}.edge-fade:before,.edge-fade:after{width:18vw}.grain{opacity:.022}.halftone{background-size:6px 6px}.marquee-track{animation-duration:22s}}
 @media(max-width:374px){.label{font-size:8px;letter-spacing:.15em}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}.marquee-track{transform:none!important}.bounce-soft{transform:none!important}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}.marquee-track{transform:none!important}.bounce-soft{transform:none!important}.nx-pointer-aura{display:none!important}}
