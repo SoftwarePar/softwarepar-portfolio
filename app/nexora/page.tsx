@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import NexoraV12 from '@/components/nexora/NexoraV12';
+import NexoraInteractionLayer from '@/components/nexora/NexoraInteractionLayer';
 
 export const metadata: Metadata = {
   title: 'NEXORA V12 — Enterprise AI Command Center',
@@ -7,5 +8,10 @@ export const metadata: Metadata = {
 };
 
 export default function NexoraPage() {
-  return <NexoraV12 />;
+  return (
+    <>
+      <NexoraV12 />
+      <NexoraInteractionLayer />
+    </>
+  );
 }
