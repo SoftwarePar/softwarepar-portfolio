@@ -1,140 +1,78 @@
-<div align="center">
+# Pablo Solla — AI Solutions
 
-# SoftwarePar — AI Systems & Full-Stack Portfolio
+> **AI Solutions · AI-Assisted Product Development · Automation · Intelligent Business Systems**
 
-### AI-powered software · SaaS · CRM · Automation · Premium Frontend
+I design and build practical digital solutions with AI at the center of the workflow: from discovery and architecture to functional prototypes, business systems, automation and polished user experiences.
 
-**Pablo Solla** — AI Systems & Full-Stack Developer based in Argentina
-
-I design and build digital products where **software engineering, artificial intelligence, automation and product design** work as one system.
-
-</div>
-
----
+This repository is a **curated public portfolio**. It contains demonstrable work and sanitized case studies only — no client credentials, private databases, production secrets or confidential source material.
 
 ## What I build
 
-I focus on turning business processes and product ideas into functional software: from discovery and architecture to interface, automation, deployment and iteration.
+- **AI-enabled business systems** — operational platforms, intelligent workflows and decision-support interfaces.
+- **AI agents & automation** — task orchestration, structured pipelines, integrations and human-in-the-loop flows.
+- **CRM & commercial intelligence** — pipelines, follow-up logic, dashboards and traceable customer operations.
+- **SaaS & internal tools** — dashboards, portals, admin systems and workflow-oriented products.
+- **AI-assisted digital experiences** — premium interfaces, interactive landing pages and product demos.
 
-- **AI Systems & Agents** — AI-assisted workflows, intelligent orchestration, memory, reasoning and business automation.
-- **SaaS & Internal Platforms** — dashboards, client portals, admin panels, role-based workflows and operational systems.
-- **CRM & Sales Automation** — pipelines, lead management, follow-ups, traceability, notifications and integrations.
-- **Premium Web Experiences** — high-fidelity landing pages, interactive portfolios and motion-driven interfaces.
-- **Rapid Product Development** — AI-assisted prototyping and MVP development with production-oriented architecture.
+## Featured work
 
-## Selected work
+### 01 — AI Clinical Intelligence Architecture
+A privacy-safe architecture case study showing how an AI-assisted clinical workflow can evolve from synchronous processing into an event-driven, auditable system with memory, evidence, confidence thresholds and human validation.
 
-### PIXZEN — Interactive Digital Experience
-Premium portfolio experience built around editorial composition, motion and interactive storytelling.
+**Explore:** [`showcase/ai-clinical-intelligence.md`](showcase/ai-clinical-intelligence.md)
 
-`Next.js 15` `TypeScript` `Tailwind CSS v4` `GSAP` `ScrollTrigger` `Framer Motion` `Lenis`
+### 02 — CRM Intelligence & Automation
+A business-oriented case study covering lead lifecycle, traceability, follow-up automation, activity history and operational dashboards.
 
-**Highlights:** responsive motion system, cinematic hero treatment, reusable UI architecture, static deployment pipeline and performance-aware asset handling.
+**Explore:** [`showcase/crm-intelligence.md`](showcase/crm-intelligence.md)
 
-### Nexora — SaaS Operations Dashboard
-A premium SaaS dashboard concept focused on turning operational data into a coherent product experience instead of disconnected metrics.
+### 03 — Portfolio OS / AI Demo Studio
+Architecture for a bilingual portfolio ecosystem with public demos, private client portal, AI-assisted demo production, feedback and version lifecycle.
 
-**Highlights:** KPI hierarchy, functional controls, traceable data flows, dashboard information architecture and dense UI without unnecessary scrolling.
+**Explore:** [`showcase/portfolio-os.md`](showcase/portfolio-os.md)
 
-### Portfolio OS — Client & Demo Platform
-A broader product architecture combining a public portfolio, interactive demos, private client portal and AI-assisted Demo Studio.
+### 04 — Nexora SaaS Intelligence Dashboard
+A UI/product case study focused on transforming disconnected metrics into a coherent, actionable SaaS dashboard with functional interactions and information hierarchy.
 
-**Product workflow:** `REQUESTED → BRIEFING → IN_PROGRESS → INTERNAL_REVIEW → DEMO_READY → FEEDBACK → APPROVED`
+**Explore:** [`showcase/nexora-saas.md`](showcase/nexora-saas.md)
 
-**Architecture:** role-based access, clients, projects, briefs, versions, deployments, feedback, notifications and activity logs. Designed bilingual-first for Spanish and English.
+### 05 — PIXZEN Interactive Experience
+A production frontend demonstrating motion, responsive design, video treatment and premium interaction patterns.
 
-### AI CRM & Automation Systems
-Business systems designed around lead lifecycle, centralized information, automated follow-up and operational traceability.
+**Source in this repository:** [`app`](app) · [`components`](components)
 
-**Focus:** CRM pipelines, WhatsApp/LinkedIn-oriented workflows, dashboards, scheduling, notifications, integrations and AI-assisted automation.
+## AI solution workflow
 
-### AI Agent Architecture
-Experiments and production patterns for modular AI agents, reusable skills and structured orchestration.
+`Business problem → Discovery → AI-assisted architecture → Prototype → Functional system → Validation → Iteration`
 
-**Focus:** context management, event-driven workflows, confidence-aware processing, auditability, memory and human validation loops.
+My role is not limited to generating code. I use AI as an engineering and product multiplier: translating business problems into system requirements, selecting architectures, directing implementation, validating behavior and iterating toward a usable solution.
 
----
+## Technology ecosystem
 
-## Engineering approach
+**AI:** ChatGPT · Claude · Gemini · AI agents · structured prompting · AI-assisted engineering  
+**Product & automation:** APIs · workflow orchestration · event-driven concepts · CRM logic · human-in-the-loop validation  
+**Web:** Next.js · React · TypeScript · Tailwind CSS · HTML/CSS/JS  
+**Experience:** GSAP · ScrollTrigger · Framer Motion · Lenis · Three.js concepts  
+**Engineering:** Git · GitHub · Python · JSON/REST · deployment workflows
 
-```text
-Business Problem
-      ↓
-Discovery & Requirements
-      ↓
-System / Product Architecture
-      ↓
-UX + Data + AI Workflow Design
-      ↓
-Rapid Functional Prototype
-      ↓
-Implementation & Integration
-      ↓
-QA · Performance · Security
-      ↓
-Deploy · Measure · Iterate
-```
+## Portfolio principles
 
-I use AI as an engineering multiplier, not as a replacement for architecture. The objective is always a maintainable product with clear workflows, understandable interfaces and measurable business value.
+Every public case study focuses on four questions: **what problem existed, what solution was designed, how the system works, and what value the architecture provides.** Sensitive operational details are deliberately excluded.
 
-## Core stack
-
-| Area | Technologies & Tools |
-|---|---|
-| Frontend | Next.js · React · TypeScript · Tailwind CSS |
-| Motion / 3D | GSAP · ScrollTrigger · Framer Motion · Lenis · Three.js / R3F |
-| AI | LLM workflows · AI agents · Gemini · Claude · ChatGPT |
-| Automation | APIs · Webhooks · n8n / Make / Zapier patterns · Python |
-| Product Systems | SaaS · CRM · Dashboards · Admin Panels · Client Portals |
-| Data | SQL / relational modeling · JSON workflows · analytics patterns |
-| Delivery | Git · GitHub · GitHub Actions · iterative AI-assisted development |
-
-## How I work with AI
-
-My workflow combines product reasoning with multiple AI development environments and models. I use them for architecture exploration, implementation, debugging, refactoring, UI iteration, documentation and automation while keeping requirements, validation and system coherence explicit.
-
-The result is a development process optimized for **speed without giving up structure**.
-
-## Repository architecture
+## Repository map
 
 ```text
 softwarepar-portfolio/
-├── app/          # Next.js application routes
-├── components/   # Reusable product and visual components
-├── public/       # Production media and static assets
-├── docs/         # Engineering and production protocols
-└── .github/      # CI/CD workflows
+├── app/                 # Functional portfolio application
+├── components/          # Reusable UI and interaction components
+├── public/              # Public presentation assets
+├── showcase/            # Sanitized AI solution case studies
+├── docs/                # Public engineering/design documentation
+└── README.md            # Recruiter-facing portfolio index
 ```
-
-## Production standards
-
-The repository includes a documented production protocol for premium landing pages, websites, portfolio experiences and SaaS frontends:
-
-[`docs/LANDING_PRODUCTION_PROTOCOL.md`](docs/LANDING_PRODUCTION_PROTOCOL.md)
-
-It covers reference analysis, implementation strategy, responsive behavior, asset handling, visual QA, debugging and deployment.
-
-## Current focus
-
-- AI-native business systems
-- Autonomous and semi-autonomous agents
-- CRM and workflow automation
-- SaaS product development
-- High-fidelity frontend engineering
-- Human-in-the-loop AI architectures
 
 ## Contact
 
 **Pablo Solla**  
-AI Systems & Full-Stack Developer · Argentina
-
-LinkedIn: [pablo-solla-sdr](https://www.linkedin.com/in/pablo-solla-sdr)  
-WhatsApp: [Contact](https://wa.me/5491161396633)
-
----
-
-<div align="center">
-
-**Build systems, not isolated screens. Automate processes, not just tasks.**
-
-</div>
+AI Solutions · Argentina  
+LinkedIn: https://www.linkedin.com/in/pablo-solla-sdr
